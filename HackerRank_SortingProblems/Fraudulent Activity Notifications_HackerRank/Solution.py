@@ -5,12 +5,12 @@ import os
 import random
 import re
 import sys
-from collections import deque
+import collections
 # Complete the activityNotifications function below.
 def activityNotifications(e, d):
     maximum=max(e)+1
     element_count=[0]*maximum
-    q=deque(list())
+    q=collections.deque(list())
     elen=len(e)
     day=0
     notifications=0
@@ -24,13 +24,12 @@ def activityNotifications(e, d):
         day+=1
     return(notifications)
 
-#element count means counting of every element in the list(half counting sort)
+#element_count is a counting sort list 
 def Median(element_count,alen):
     low=0
     high=0
     d=alen//2
-    
-    traversed=element_count[0]
+	traversed=element_count[0]
     i=1
     while(traversed<=d):
         high=i
@@ -42,8 +41,7 @@ def Median(element_count,alen):
         return high
     else:
         return((low+high)/2)
-
-
+		
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
     nd = input().split()
@@ -53,5 +51,4 @@ if __name__ == '__main__':
     result = activityNotifications(expenditure, d)
     #print(Median([0,0,2,2,2],6))
     fptr.write(str(result) + '\n')
-
     fptr.close()
