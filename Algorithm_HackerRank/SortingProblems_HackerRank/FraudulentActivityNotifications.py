@@ -1,5 +1,4 @@
 #!/bin/python3
-
 import math
 import os
 import random
@@ -23,7 +22,6 @@ def activityNotifications(e, d):
         q.append(e[day])
         day+=1
     return(notifications)
-
 #element_count is a counting sort list 
 def Median(element_count,alen):
     low=0
@@ -41,7 +39,6 @@ def Median(element_count,alen):
         return high
     else:
         return((low+high)/2)
-		
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
     nd = input().split()
