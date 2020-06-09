@@ -1,3 +1,4 @@
+#ProblemLink:https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem
 #!/bin/python3
 import math
 import os
@@ -46,6 +47,5 @@ if __name__ == '__main__':
     d = int(nd[1])
     expenditure = list(map(int, input().rstrip().split()))
     result = activityNotifications(expenditure, d)
-    #print(Median([0,0,2,2,2],6))
     fptr.write(str(result) + '\n')
     fptr.close()
