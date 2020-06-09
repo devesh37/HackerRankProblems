@@ -1,8 +1,6 @@
 #Problem Link: https://www.hackerrank.com/challenges/tree-huffman-decoding/problem
 import queue as Queue
-
 cntr = 0
-
 class Node:
     def __init__(self, freq, data):
         self.freq = freq
@@ -18,10 +16,8 @@ class Node:
             return self.freq < other.freq
         return self._count < other._count
 
-def huffman_hidden():#builds the tree and returns root
+def huffman_hidden():
     q = Queue.PriorityQueue()
-
-    
     for key in freq:
         q.put((freq[key], key, Node(freq[key], key) ))
     
@@ -42,10 +38,8 @@ def dfs_hidden(obj, already):
         return
     elif(obj.data != '\0'):
         code_hidden[obj.data] = already
-        
     dfs_hidden(obj.right, already + "1")
     dfs_hidden(obj.left, already + "0")
-
 """class Node:
     def __init__(self, freq,data):
         self.freq= freq
@@ -53,9 +47,7 @@ def dfs_hidden(obj, already):
         self.left = None
         self.right = None
 """        
-
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-
 def decodeHuff(root, s):
     tmp=root
     i=0
@@ -72,6 +64,4 @@ def decodeHuff(root, s):
         else:
             tmp=tmp.right
         i+=1
-
-
 ip = input()
