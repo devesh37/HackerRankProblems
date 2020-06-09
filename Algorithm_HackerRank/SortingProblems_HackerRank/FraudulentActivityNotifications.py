@@ -27,7 +27,7 @@ def Median(element_count,alen):
     low=0
     high=0
     d=alen//2
-	traversed=element_count[0]
+    traversed=element_count[0]
     i=1
     while(traversed<=d):
         high=i
